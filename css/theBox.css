@@ -1,0 +1,119 @@
+body {
+	background-color: black;
+}
+
+#mainQuestion
+{
+	text-align: center;
+	padding-top: 2cm;
+	margin-bottom: 2cm;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#theBox
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#quote 
+{
+	color: white;
+	font-style: italic;
+	text-align: center;
+}
+
+#music
+{
+	visibility: hidden;
+}
+
+.container {
+	perspective: 500px;
+	perspective-origin: 50% -150px;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	margin: 180px auto;
+	transform-style: preserve-3d;
+	animation: spin 3s;
+}
+
+.box:hover {
+	animation: spin 3s infinite linear;
+}
+
+.box:hover .flap-1 {
+	transform: rotateX(-120deg);
+}
+
+.box:hover .flap-2 {
+	transform: rotateX(120deg);
+}
+
+@keyframes spin {
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+.side {
+	width: 100px;
+	height: 100px;
+	background: #c3834c;
+	border: 1px solid #000;
+	position: absolute;
+}
+
+.side-1 {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	transform: rotateX(90deg) translateZ(50px);
+	transform-style: preserve-3d;
+}
+
+.side-2 {
+	transform: translateZ(50px);
+}
+
+.side-3 {
+	transform: rotateY(90deg) translateZ(50px);
+}
+
+.side-4 {
+	transform: rotateX(-90deg) rotate(180deg) translateZ(50px);
+}
+
+.side-5 {
+	transform: rotateY(180deg) translateZ(50px);
+}
+
+.side-6 {
+	transform: rotateY(-90deg) translateZ(50px);
+}
+
+.inner-side {
+	transition: 1s all linear;
+}
+
+.flap-1, .flap-2 {
+	width: 100px;
+	height: 50px;
+}
+
+.flap-1 {
+	top: 50px;
+	transform-origin: 0px 50px;
+}
+
+.flap-2 {
+	transform-origin: 100px 0px;
+}
