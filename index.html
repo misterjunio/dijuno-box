@@ -17,7 +17,7 @@
 	<body>
 		<h1 id="mainQuestion">What's in the box?</h1>
 
-		<img id="theBox" src="./img/theBox.jpg">
+		<img id="theBox" src="./assets/img/theBox.jpg">
 
 		<div id="quote" style="display: none">
 			<p>“We deserve some respect.</p>
@@ -30,25 +30,24 @@
 			<p>help and be good to someone you loved and valued.”</p>
 		</div>
 
-		<!-- Didicas não ligues a esta parte ihih -->
-		<section class="container">
-			<div class="box">
-				<div class="side-1">
-					<div class="side inner-side flap-1"></div>
-					<div class="side inner-side flap-2"></div>
-				</div>
-				<div class="side side-2"></div>
-				<div class="side side-3"></div>
-				<div class="side side-4"></div>
-				<div class="side side-5"></div>
-				<div class="side side-6"></div>
-			</div>
-		</section>
-
 		<audio id="music">
-			<source src="music/amelie.mp3" type="audio/mp3">
+			<source src="./assets/music/amelie.mp3" type="audio/mp3">
 		</audio>
 
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
+		<script>
+			var config = {
+				apiKey: "AIzaSyAspsEY_loJ6QA_ntSL6hGaUbJkoGoMaKQ",
+				authDomain: "dijuno-box.firebaseapp.com",
+				databaseURL: "https://dijuno-box.firebaseio.com",
+				projectId: "dijuno-box",
+				storageBucket: "dijuno-box.appspot.com",
+				messagingSenderId: "131393278053"
+			};
+			firebase.initializeApp(config);
+		</script>
 	</body>
 
 </html>
