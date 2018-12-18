@@ -12,11 +12,12 @@ $(document).ready(function() {
 	currentSong.getDownloadURL().then(url => {
 		console.log("url", url);
 		$("#musicSrc").attr("src", url);
+		$("#music")[0].load();
 	})
 	$("#theBox").click(function() {
 		$("#quote").fadeIn(2500);
 		$("#theBox").fadeOut(2500, function() {
-			$("#music").prop('controls', true);
+			//$("#music").prop('controls', false);
 			$("#music")[0].play();
 		});
 	});
