@@ -2,9 +2,26 @@
 
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>What's in the box</title>
 
 		<link rel="stylesheet" href="./css/theBox.css">
+		
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
+		<script>
+			// Initialize Firebase
+			const config = {
+				apiKey: "AIzaSyAspsEY_loJ6QA_ntSL6hGaUbJkoGoMaKQ",
+				authDomain: "dijuno-box.firebaseapp.com",
+				databaseURL: "https://dijuno-box.firebaseio.com",
+				projectId: "dijuno-box",
+				storageBucket: "dijuno-box.appspot.com",
+				messagingSenderId: "131393278053"
+			};
+			firebase.initializeApp(config);
+		</script>
 
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.js"
@@ -30,24 +47,9 @@
 			<p>help and be good to someone you loved and valued.”</p>
 		</div>
 
-		<audio id="music">
-			<source src="./assets/music/amelie.mp3" type="audio/mp3">
+		<audio>
+			<source id="musicSrc" src="./assets/music/amelie.mp3" type="audio/mp3">
 		</audio>
-
-		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js"></script>
-		<script>
-			var config = {
-				apiKey: "AIzaSyAspsEY_loJ6QA_ntSL6hGaUbJkoGoMaKQ",
-				authDomain: "dijuno-box.firebaseapp.com",
-				databaseURL: "https://dijuno-box.firebaseio.com",
-				projectId: "dijuno-box",
-				storageBucket: "dijuno-box.appspot.com",
-				messagingSenderId: "131393278053"
-			};
-			firebase.initializeApp(config);
-		</script>
 	</body>
 
 </html>
